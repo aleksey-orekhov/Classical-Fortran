@@ -1,0 +1,19 @@
+<project name="fortran" default="build" xmlns:cpptasks="antlib:net.sf.antcontrib.cpptasks">
+	
+	<cpptasks:compiler name="g77" />
+	<!--cpptasks:linker/-->
+	
+    <target name="clean">
+    	<echo>=== CLEAN ===</echo>
+    	<delete includeEmptyDirs="true">
+			<fileset dir="." includes="**/*.o"/>
+		</delete>
+    </target>
+
+    <target name="build">
+    	<cpptasks:cc outtype="executable" subsystem="console" outfile="hello">
+    	           <fileset dir="." includes="*.f"/>
+    	</cpptasks:cc>
+    </target>
+
+</project>
