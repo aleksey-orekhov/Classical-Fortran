@@ -1,6 +1,8 @@
 C     Sort 3 inputs from biggest to smallest
 
 
+
+
       REAL(4) A,B,C
       PRINT *,"A"
       READ *,A
